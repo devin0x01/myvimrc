@@ -46,6 +46,14 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 
 
+"---quickfix---
+noremap <leader>co :<C-U><C-R>=printf("copen %s", "")<CR>
+noremap <leader>cc :cclose<CR>
+noremap <leader>cn :cnext<CR>
+noremap <leader>cp :cprev<CR>
+noremap <leader>cj :<C-U><C-R>=printf("cc %s", "")<CR>
+
+
 "---tabs---
 nnoremap tn :tabnew<CR>
 nnoremap tc :tabclose<CR>
@@ -235,13 +243,13 @@ let g:gutentags_auto_add_gtags_cscope = 0
 "---gutentags_plus---
 let g:gutentags_plus_nomap = 1
 " Find symbol (reference) under cursor
-noremap <silent> <leader>cs :GscopeFind s <C-R><C-W><cr>
+noremap <silent> <leader>cr :GscopeFind s <C-R><C-W><cr>
 " Find symbol definition under cursor
-noremap <silent> <leader>cg :GscopeFind g <C-R><C-W><cr>
+noremap <silent> <leader>cd :GscopeFind g <C-R><C-W><cr>
 " Functions calling this function
-noremap <silent> <leader>cc :GscopeFind c <C-R><C-W><cr>
+noremap <silent> <leader>cf :GscopeFind c <C-R><C-W><cr>
 " Functions called by this function
-noremap <silent> <leader>cd :GscopeFind d <C-R><C-W><cr>
+" noremap <silent> <leader>cd :GscopeFind d <C-R><C-W><cr>
 " Find places where current symbol is assigned
 noremap <silent> <leader>ca :GscopeFind a <C-R><C-W><cr>
 " Find text string under cursor
@@ -249,11 +257,12 @@ noremap <silent> <leader>ct :GscopeFind t <C-R><C-W><cr>
 " Find egrep pattern under cursor
 noremap <silent> <leader>ce :GscopeFind e <C-R><C-W><cr>
 " Find file name under cursor
-noremap <silent> <leader>cf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
+" noremap <silent> <leader>cf :GscopeFind f <C-R>=expand("<cfile>")<cr><cr>
 " Find files #including the file name under cursor
 noremap <silent> <leader>ci :GscopeFind i <C-R>=expand("<cfile>")<cr><cr>
 " Find current word in ctags database
 noremap <silent> <leader>cz :GscopeFind z <C-R><C-W><cr>
+noremap <silent> <leader>cu :GutentagsUpdate<cr>
 
 
 "---floaterm---
