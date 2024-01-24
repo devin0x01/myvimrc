@@ -55,14 +55,15 @@ noremap <leader>cj :<C-U><C-R>=printf("cc %s", "")<CR>
 
 
 "---tabs---
-nnoremap tn :tabnew<CR>
-nnoremap tc :tabclose<CR>
+noremap tn :tabnew<CR>
+noremap tc :tabclose<CR>
 "close other tabs
-nnoremap to :tabonly<CR>
-"gt
-nnoremap th :tabnext<CR>
-"gT
-nnoremap tl :tabprev<CR>
+noremap to :tabonly<CR>
+"ngt move to the n-th tab
+"gt move to next tab
+noremap tl :tabnext<CR>
+"gT move to prev tab
+noremap th :tabprev<CR>
 
 
 "---gvim---
