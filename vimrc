@@ -88,9 +88,9 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'voldikss/vim-floaterm'
 Plug 'zivyangll/git-blame.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/vim-gitbranch'
+Plug 'itchyny/lightline.vim'
 Plug 'obcat/vim-hitspop'
 Plug 'tjdevries/overlength.vim'
 "Plug 'kien/ctrlp.vim'
@@ -132,6 +132,7 @@ let g:NERDCreateDefaultMappings = 0
 noremap <C-_> <plug>NERDCommenterToggle
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 
 "---fzf.vim---
