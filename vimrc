@@ -335,10 +335,11 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch1', 'readonly', 'filename', 'modified' ],
-      \             [ 'tagbar', 'gutentags' ] ]
+      \             [ 'tagbar' ],
+      \             [ 'gutentags' ] ]
       \ },
       \ 'component': {
-      \         'tagbar': '%{tagbar#currenttag("%s", "", "f")}',
+      \         'tagbar': '%{MyTagbar()}',
       \         'gutentags': '%{gutentags#statusline()}'
       \ },
       \ 'component_function': {
@@ -346,6 +347,13 @@ let g:lightline = {
       \   'gitbranch2': 'FugitiveHead'
       \ },
       \ }
+function MyTagbar()
+    if &filetype == 'cpp' || &filetype == 'c'
+        return tagbar#currenttag("%s", "", "f")
+    else
+        return ""
+    endif
+endfunction
 
 
 "---hitspop---
