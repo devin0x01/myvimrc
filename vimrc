@@ -90,6 +90,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'zivyangll/git-blame.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'itchyny/lightline.vim'
 Plug 'obcat/vim-hitspop'
@@ -97,7 +98,6 @@ Plug 'tjdevries/overlength.vim'
 "Plug 'kien/ctrlp.vim'
 "Plug 'zuo000/winmanager--Fox'
 "Plug 'wfxr/minimap.vim'
-"Plug 'vhda/verilog_systemverilog.vim'
 call plug#end()
 
 
@@ -186,7 +186,7 @@ noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("
 "noremap <C-G> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 
 noremap <unique> <leader>fr   <Plug>LeaderfRgPrompt
-noremap <unique> <leader>fre  :<C-U><C-R>=printf("Leaderf! rg -e %s -t cpp -g !*test* -g !experiment", expand("<cword>"))<CR>
+noremap <unique> <leader>fre  :<C-U><C-R>=printf("Leaderf! rg -e %s -t cpp -g !*test* -g !experiment -g !subNetlist ", expand("<cword>"))<CR>
 
 nnoremap <unique> <leader>fra <Plug>LeaderfRgCwordLiteralNoBoundary
 nnoremap <unique> <leader>frb <Plug>LeaderfRgCwordLiteralBoundary
@@ -323,6 +323,18 @@ noremap <unique> <leader>gd :GitGutterDiffOrig<CR>
 "set statusline+=%{GitStatus()}
 
 
+"---gv.vim---
+" :GV to open commit browser
+" :GV! will only list commits that affected the current file
+" :GV? fills the location list with the revisions of the current file
+" :GV or :GV? can be used in visual mode to track the changes in the selected lines.
+
+" Mappings
+" o or <cr> on a commit to display the content of it
+" o or <cr> on commits to display the diff in the range
+" O opens a new tab instead
+
+
 "---lightline---
 " refer to https://github.com/itchyny/lightline.vim#introduction
 set laststatus=2
@@ -365,7 +377,7 @@ noremap <leader>T :<C-U><C-R>=printf("let g:hitspop_timeout=200")<CR>
 
 "---overlength---
 let overlength#default_to_textwidth = 0
-let overlength#default_overlength = 1000
+let overlength#default_overlength = 100000
 " To disable highlighting in multiple fts at once
 call overlength#disable_filetypes(['markdown', 'term', 'vim'])
 " length==0 means disable
