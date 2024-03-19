@@ -84,6 +84,7 @@ Plug 'devin0x01/fzf' , { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF'
 Plug 'jremmen/vim-ripgrep'
+Plug 'brooth/far.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 Plug 'voldikss/vim-floaterm'
@@ -210,6 +211,18 @@ vnoremap <unique> <leader>frd <Plug>LeaderfRgVisualRegexBoundary
 let g:rg_window_location = 'botright'
 
 
+"---far.vim---
+set lazyredraw            " improve scrolling performance when navigating through large results
+set regexpengine=1        " use old regexp engine
+set ignorecase smartcase  " ignore case only when the pattern contains no capital letters
+" shortcut for far.vim find
+nnoremap <silent> <Find-Shortcut>  :Farf<cr>
+vnoremap <silent> <Find-Shortcut>  :Farf<cr>
+" shortcut for far.vim replace
+nnoremap <silent> <Replace-Shortcut>  :Farr<cr>
+vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
+
+
 "---gutentags---
 " https://zhuanlan.zhihu.com/p/36279445
 " gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
@@ -274,11 +287,11 @@ noremap <silent> <leader>cu :GutentagsUpdate<cr>
 "let g:floaterm_height = 0.3
 "let g:floaterm_width = 1
 "let g:floaterm_position = 'bottom'
-let g:floaterm_keymap_new    = '<F7>'
-let g:floaterm_keymap_prev   = '<F8>'
-let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F12>'
-let g:floaterm_keymap_toggle = '<leader>t'
+" let g:floaterm_keymap_new    = '<F7>'
+" let g:floaterm_keymap_prev   = '<F8>'
+" let g:floaterm_keymap_next   = '<F9>'
+" let g:floaterm_keymap_toggle = '<F12>'
+" let g:floaterm_keymap_toggle = '<leader>t'
 
 
 "---git-blame---
