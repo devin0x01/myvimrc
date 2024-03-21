@@ -147,10 +147,14 @@ let g:NERDDefaultAlign = 'left'
 "---Leaderf---
 "https://retzzz.github.io/dc9af5aa
 let g:Lf_WildIgnore={ 'file':['*.lib', '*.a', '*.o', '*.d', '*.so', ], 'dir':['.git']}
-let g:Lf_WindowPosition = 'popup'
+" let g:Lf_WindowPosition = 'popup'
+let g:Lf_WindowPosition = 'bottom'
+let g:Lf_WindowHeight = 0.3
 let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
-let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
-let g:Lf_PreviewPopupWidth = 500
+let g:Lf_PreviewPosition = 'popup'
+let g:Lf_PreviewResult = { 'BufTag': 0 }
+let g:Lf_PreviewPopupWidth = &columns * 3 / 4
+let g:Lf_PreviewCode = 1
 let g:Lf_ShortcutF = "<leader>ff"
 ":bd can delete a buffer.
 "let g:Lf_ShortcutB = "<leader>fb"
