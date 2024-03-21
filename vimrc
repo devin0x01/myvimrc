@@ -154,6 +154,8 @@ let g:Lf_PreviewPopupWidth = 500
 let g:Lf_ShortcutF = "<leader>ff"
 ":bd can delete a buffer.
 "let g:Lf_ShortcutB = "<leader>fb"
+"https://github.com/Yggdroot/LeaderF/issues/161
+let g:Lf_UseCache = 0
 noremap <leader>f :LeaderfSelf<CR>
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
