@@ -207,6 +207,8 @@ vnoremap <unique> <leader>frd <Plug>LeaderfRgVisualRegexBoundary
 
 
 "---ripgrep---
+" Usage: `Rg number %` will search the string `number` in current file.
+"        `Rg number` will search the string `number` in all files.
 "g:rg_format	%f:%l:%c:%m	value of grepformat
 " true if you want matches highlighted
 " let g:rg_highlight = 'true'
@@ -218,6 +220,9 @@ let g:rg_window_location = 'botright'
 
 
 "---far.vim---
+" Find: F <str> <file_mask>, e.g. F number **/*.hpp
+" Replace: Far <old_str> <new_str> <file_mask>, e.g. Far number num **/*.hpp
+"   press t/T to toggle selection.
 set lazyredraw            " improve scrolling performance when navigating through large results
 set regexpengine=1        " use old regexp engine
 set ignorecase smartcase  " ignore case only when the pattern contains no capital letters
