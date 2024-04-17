@@ -8,6 +8,7 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set hlsearch
+" set mouse=a
 set list
 set listchars=tab:>-,trail:-
 set encoding=UTF-8
@@ -21,6 +22,9 @@ set backspace=indent,eol,start
 "https://superuser.com/questions/249779/how-to-setup-a-line-length-marker-in-vim-gvim
 "set colorcolumn=120
 "highlight ColorColumn ctermbg=grey
+"https://stackoverflow.com/questions/75318113/i-compile-vim9-by-my-self-but-esc4m-keeps-showing-up-whyhow-to-fix-this
+set keyprotocol=
+let &term=&term
 
 
 let mapleader = ","
