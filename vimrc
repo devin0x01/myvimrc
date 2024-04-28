@@ -100,6 +100,7 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'itchyny/lightline.vim'
 Plug 'obcat/vim-hitspop'
 Plug 'tjdevries/overlength.vim'
+Plug 'azabiong/vim-highlighter'
 "Plug 'kien/ctrlp.vim'
 "Plug 'zuo000/winmanager--Fox'
 "Plug 'wfxr/minimap.vim'
@@ -410,6 +411,14 @@ let overlength#default_overlength = 100000
 call overlength#disable_filetypes(['markdown', 'term', 'vim'])
 " length==0 means disable
 call overlength#set_overlength('cpp', 120)
+
+
+"---vim-highlighter---
+let HiSet   = 'fs'
+let HiErase = 'fe'
+let HiClear = 'fc'
+" let HiFind  = 'f<Tab>'
+" let HiSetSL = 't<CR>'
 
 
 "---ctrlp---
