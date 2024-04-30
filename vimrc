@@ -75,6 +75,11 @@ autocmd GUIEnter * simalt ~x
 set guifont=Consolas:h13
 
 
+"---diff---
+noremap <leader>dt :wind diffthis<CR>
+noremap <leader>dc :wind diffoff<CR>
+
+
 "---plugins---
 " The default plugin directory will be as follows: Vim (Linux/macOS): '~/.vim/plugged'
 call plug#begin()
