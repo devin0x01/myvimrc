@@ -125,9 +125,9 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 
 
 "---taglist---
-"nnoremap <leader>b :TlistOpen <CR>
 let Tlist_GainFocus_On_ToggleOpen = 1
-nnoremap <C-b> :TlistToggle<CR>
+noremap <leader>b :TlistOpen<CR>
+noremap <C-b> :TlistToggle<CR>
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
