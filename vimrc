@@ -419,9 +419,9 @@ call overlength#set_overlength('cpp', 120)
 
 
 "---vim-highlighter---
-let HiSet   = 'fs'
-let HiErase = 'fe'
-let HiClear = 'fc'
+let HiSet   = '<leader>hs'
+let HiErase = '<leader>he'
+let HiClear = '<leader>hc'
 " let HiFind  = 'f<Tab>'
 " let HiSetSL = 't<CR>'
 
