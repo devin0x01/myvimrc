@@ -68,6 +68,8 @@ noremap to :tabonly<CR>
 noremap tl :tabnext<CR>
 "gT move to prev tab
 noremap th :tabprev<CR>
+"goto the n-th tab
+noremap tj :<C-U><C-R>=printf("tabnext %s", "")<CR>
 
 
 "---gvim---
