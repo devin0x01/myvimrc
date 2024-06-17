@@ -80,6 +80,9 @@ set guifont=Consolas:h13
 "---diff---
 noremap <leader>dt :wind diffthis<CR>
 noremap <leader>dc :wind diffoff<CR>
+if &diff
+    colorscheme quiet
+endif
 
 
 "---plugins---
