@@ -80,6 +80,7 @@ set guifont=Consolas:h13
 "---diff---
 noremap <leader>dt :wind diffthis<CR>
 noremap <leader>dc :wind diffoff<CR>
+"use :colorscheme to view current configuration
 if &diff
     colorscheme quiet
 endif
@@ -360,6 +361,14 @@ noremap <unique> <leader>gd :GitGutterDiffOrig<CR>
 "  return printf('+%d ~%d -%d', a, m, r)
 "endfunction
 "set statusline+=%{GitStatus()}
+
+
+"---vim-fugitive---
+" :Git blame    =
+" :Git difftool = load changesets into the quickfix list
+" :Git          = open a summary window with dirty files and untracked files
+" :Gvdiffsplit         = diff with last commit
+" :Gvdiffsplit HEAD~3  = diff with 3-commit ago
 
 
 "---gv.vim---
