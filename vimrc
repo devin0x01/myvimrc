@@ -59,17 +59,17 @@ noremap <leader>cj :<C-U><C-R>=printf("cc %s", "")<CR>
 
 
 "---tabs---
-noremap tn :tabnew<CR>
-noremap tc :tabclose<CR>
+noremap <leader>tn :tabnew<CR>
+noremap <leader>tc :tabclose<CR>
 "close other tabs
-noremap to :tabonly<CR>
+noremap <leader>to :tabonly<CR>
 "ngt move to the n-th tab
 "gt move to next tab
-noremap tl :tabnext<CR>
+noremap <leader>tl :tabnext<CR>
 "gT move to prev tab
-noremap th :tabprev<CR>
+noremap <leader>th :tabprev<CR>
 "goto the n-th tab
-noremap tj :<C-U><C-R>=printf("tabnext %s", "")<CR>
+noremap <leader>tj :<C-U><C-R>=printf("tabnext %s", "")<CR>
 
 
 "---gvim---
