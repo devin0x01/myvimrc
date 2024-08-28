@@ -436,8 +436,16 @@ call overlength#set_overlength('cpp', 120)
 let HiSet   = '<leader>hs'
 let HiErase = '<leader>he'
 let HiClear = '<leader>hc'
-" let HiFind  = 'f<Tab>'
-" let HiSetSL = 't<CR>'
+" let HiFind  = '<leader>hf'
+"pattern
+noremap <leader>hp  <Cmd>Hi<<CR>
+noremap <leader>hn  <Cmd>Hi><CR>
+"same color highlight with different pattern
+noremap <leader>h[  <Cmd>Hi[<CR>
+noremap <leader>h]  <Cmd>Hi]<CR>
+"nearest highlight
+noremap <leader>h{  <Cmd>Hi{<CR>
+noremap <leader>h}  <Cmd>Hi}<CR>
 
 
 "---ctrlp---
