@@ -309,16 +309,17 @@ noremap <silent> <leader>cu :GutentagsUpdate<cr>
 
 "---floaterm---
 "default is 'float'(popup)
-"let g:floaterm_title = 'floaterm($1|$2)'
-"let g:floaterm_wintype = 'split'
-"let g:floaterm_height = 0.3
-"let g:floaterm_width = 1
-"let g:floaterm_position = 'bottom'
-" let g:floaterm_keymap_new    = '<F7>'
-" let g:floaterm_keymap_prev   = '<F8>'
-" let g:floaterm_keymap_next   = '<F9>'
-" let g:floaterm_keymap_toggle = '<F12>'
-" let g:floaterm_keymap_toggle = '<leader>t'
+let g:floaterm_title = 'floaterm($1|$2)'
+" let g:floaterm_wintype = 'split'
+" let g:floaterm_height = 0.3
+" let g:floaterm_width = 1
+" let g:floaterm_position = 'bottom'
+"close floaterm window once the job gets finished to avoid failed to quit vim.
+let g:floaterm_autoclose = 2
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
 
 
 "---git-blame---
