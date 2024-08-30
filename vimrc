@@ -182,6 +182,8 @@ noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 "LeaderfTag depends on ctags
 noremap <leader>fT :<C-U><C-R>=printf("Leaderf tag %s", "")<CR><CR>
+noremap <leader>fd <C-]><CR>
+"search a line in current buffer
 noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
 "https://zhuanlan.zhihu.com/p/36279445
