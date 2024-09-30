@@ -56,6 +56,17 @@ noremap <leader>cc :cclose<CR>
 noremap <leader>cn :cnext<CR>
 noremap <leader>cp :cprev<CR>
 noremap <leader>cj :<C-U><C-R>=printf("cc %s", "")<CR>
+noremap <leader>cm :call ToggleBufferModifiable()<CR>
+function! ToggleBufferModifiable()
+    let l:modifiable = &modifiable
+    if l:modifiable
+        setlocal nomodifiable
+    else
+        setlocal modifiable
+    endif
+
+    echo "Buffer modifiable status toggled to: " . (&modifiable ? 'modifiable' : 'non-modifiable')
+endfunction
 
 
 "---tabs---
