@@ -70,6 +70,9 @@ endfunction
 
 
 "---tabs---
+"gt     -- goto the next tab
+"gT     -- goto the previous tab
+"<n>gt  -- goto the n-th tab
 noremap <leader>tn :tabnew<CR>
 noremap <leader>tc :tabclose<CR>
 "close other tabs
