@@ -28,6 +28,8 @@ let &term=&term
 
 
 let mapleader = ","
+autocmd BufNewFile,BufRead *.gz syntax off
+
 "---move cursor---
 noremap <C-j> 4j
 noremap <C-k> 4k
