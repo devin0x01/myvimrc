@@ -10,7 +10,7 @@ set showcmd
 set hlsearch
 " set mouse=a
 set list
-set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:·
 set encoding=UTF-8
 set foldenable
 set foldmethod=syntax
@@ -72,20 +72,21 @@ endfunction
 
 
 "---tabs---
-"gt     -- goto the next tab
-"gT     -- goto the previous tab
-"<n>gt  -- goto the n-th tab
 noremap <leader>tn :tabnew<CR>
 noremap <leader>tc :tabclose<CR>
 "close other tabs
 noremap <leader>to :tabonly<CR>
-"ngt move to the n-th tab
-"gt move to next tab
-noremap <leader>tl :tabnext<CR>
-"gT move to prev tab
-noremap <leader>th :tabprev<CR>
+"3gt goto the third tab
+"gt goto the next tab
+noremap gl gt
+"gT goto prev tab
+noremap gh gT
 "goto the n-th tab
 noremap <leader>tj :<C-U><C-R>=printf("tabnext %s", "")<CR>
+"move current tab to left position
+noremap <leader>ta :tabmove -1<CR>
+"move current tab to right position
+noremap <leader>tb :tabmove +1<CR>
 
 
 "---gvim---
@@ -136,7 +137,7 @@ call plug#end()
 
 "---nerdtree---
 "nnoremap <leader>e :NERDTreeFocus<CR>
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 " nnoremap <C-f> :NERDTreeFind<CR>
 " nnoremap <C-n> :NERDTree<CR>
 
@@ -273,6 +274,15 @@ vnoremap <silent> <Replace-Shortcut>  :Farr<cr>
 " gutentags 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
 let g:gutentags_project_root = ['.root', '.svn', '.git']
 
+let g:gutentags_ctags_exclude = [
+    \ '/home/dyang01/tmp/*',
+    \ '/home/dyang01/test/*',
+    \ '/home/dyang01/issues/*',
+    \ '/scratchdisk/*',
+    \ '/Transfer/*',
+    \ '/oshome/*',
+    \]
+
 " 所生成的数据文件的名称
 let g:gutentags_ctags_tagfile = '.tags'
 
@@ -327,7 +337,7 @@ noremap <silent> <leader>cu :GutentagsUpdate<cr>
 
 "---floaterm---
 "default is 'float'(popup)
-let g:floaterm_title = 'floaterm($1|$2)'
+let g:floaterm_title = 'floaterm($1/$2)'
 " let g:floaterm_wintype = 'split'
 " let g:floaterm_height = 0.3
 " let g:floaterm_width = 1
